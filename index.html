@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
    <head>
+    <meta charset="UTF-8" />  
+    <meta author="author" content="Dianze Liu" />
+    <meta name="Description" content="this website will be used for auditing your Portfolio and provide some analysis tools and data">
+    <link rel="icon" href="icon/Screenshot 2024-06-25 at 7.17.24 PM.png">
     <link rel="stylesheet" href="styles/index.css">
     <title>stock tracker</title>
    </head>
 
    <body>
-    <h1>Stock tracker</h1>
+    <header>
+        <h1 class="header">Stock tracker</h1>
+    </header>
+
+    <main>
     <p>Add A New Stock to Your Portfolio</p>
     <div class="input-field">
         <div>
@@ -15,15 +23,17 @@
                 <div>Stock Full Name</div>
                 <div>Share Amount</div>
                 <div>Price Per Share</div>
+                <div>Purchase Date</div>
                 <div>Action</div>
                 
             </div>
-
-            <div class="input-grids">
-                <input placeholder="Stock ID" class="js-stock-id">
-                <input placeholder="Stock Full Name" class="js-stock-full-name">
-                <input placeholder="Share Amount">
-                <input placeholder="Price Per Share">
+            <!-- input unable to specific input type, please work on it -->
+            <div class="input-grids js-input-grids">
+                <input type="text" max="5" min="1"  placeholder="Stock ID" class="js-stock-id" required autocapitalize="characters">
+                <input type="text" placeholder="Stock Full Name" class="js-stock-full-name" required>
+                <input placeholder="Share Amount" class="js-stock-share-amount" required>
+                <input placeholder="Price Per Share" class="js-stock-price-per-share" required>
+                <input type="date" class="js-stock-purchase-date" required>
                 <button class="js-add-portfolio-button">Add to Your Portfolio</button>
             </div>
 
@@ -34,6 +44,13 @@
         </div>
 
     </div>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>Copyright &copy; 2024  Dianze Liu</p>
+    </footer>
 
     <script src="scripts/index.js"></script>
    </body>
